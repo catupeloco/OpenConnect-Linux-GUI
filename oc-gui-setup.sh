@@ -1,9 +1,9 @@
 #!/bin/bash
 echo instalando dependencias apt
-sudo apt install openconnect python3-pip pipx python3-tk -y
+sudo apt install openconnect python3-pip pipx python3-tk sqlite3 -y
 
 echo Instalando dependencias python
-pip install "vpn-slice[dnspython,setproctitle]" --break-system-packages tkterminal
+sudo pip install "vpn-slice[dnspython,setproctitle]" tkterminal #--break-system-packages
 
 if [ ! -d $HOME/.local/share/applications/ ] ; then
 	mkdir -p $HOME/.local/share/applications
