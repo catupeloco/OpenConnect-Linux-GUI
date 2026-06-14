@@ -22,7 +22,7 @@ if ! host ${SERVER} >/dev/null 2>&1 ; then
 	exit 11
 fi
 echo --------Starting---------------
-echo $PASSWORD | sudo openconnect --background  --server=${SERVER} --user=${VPNUSER} --passwd-on-stdin --protocol=anyconnect \
+echo $PASSWORD | sudo openconnect --background ${SERVER} --user=${VPNUSER} --passwd-on-stdin --protocol=anyconnect \
                                   --reconnect-timeout=30 --pid-file=/tmp/pid_openconnect -s "vpn-slice $DESTINYS" >/dev/null 2>&1
 echo --------Waiting----------------
 #ps -fea | grep openconnect | grep -v grep 
