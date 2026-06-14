@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo apt update
+
 echo instalando dependencias apt
 sudo apt install openconnect python3-pip pipx python3-tk sqlite3 -y
 
